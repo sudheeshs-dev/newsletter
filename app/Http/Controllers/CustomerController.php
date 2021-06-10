@@ -23,7 +23,6 @@ class CustomerController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'email' => 'required|unique:customers|email',
-            'user_group'=>'required',
             'status'=>'required'
         ]);
         $cs=new Customer;
